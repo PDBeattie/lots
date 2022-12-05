@@ -29,7 +29,7 @@ with pre_clean as (select QUERY_ID
                      and DATETIME_START_UTC::date between '2022-11-01' and '2022-11-05'
                      and PERCENTAGE_SCANNED_FROM_CACHE < 0.2
                      and USER_NAME ilike '%vestiairecollective%'
-                   limit 100)
+)
 
 select QUERY_ID
      , QUERY_TEXT
