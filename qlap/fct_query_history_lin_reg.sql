@@ -65,4 +65,5 @@ select QUERY_ID
      , ROWS_UPDATED
      , ROWS_UNLOADED
      , EXECUTION_STATUS
-from pre_clean;
+from pre_clean
+where array_size(tables_scan_list) > 0;
